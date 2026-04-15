@@ -1,0 +1,202 @@
+# THW Grundwissen – Wer wird Millionär?
+# 15 Fragen rund um das Technische Hilfswerk, aufsteigend nach Schwierigkeit.
+
+title: "THW Grundwissen"
+description: "15 Fragen rund um das Technische Hilfswerk – von leicht bis knifflig"
+
+questions:
+
+# --- Frage 1: Für 100 € ---
+- question: "Wofür steht die Abkürzung 'THW'?"
+  answers:
+  - "Technisches Hilfswerk" # A
+  - "Technische Hilfswehr" # B
+  - "Technischer Hilfsdienst West" # C
+  - "Technische Hilfsorganisation" # D
+  correct: 0
+  jokers:
+    audience: [ 75, 12, 7, 6 ]
+    phone: "Das ist ganz klar das Technische Hilfswerk – steht doch auf jedem Fahrzeug!"
+    additional: "Eindeutig A – Technisches Hilfswerk!"
+
+# --- Frage 2: Für 200 € ---
+- question: "Welchem Bundesministerium ist das THW unterstellt?"
+  answers:
+  - "Bundesministerium der Verteidigung" # A
+  - "Bundesministerium des Innern (BMI)" # B
+  - "Bundesministerium für Verkehr" # C
+  - "Bundesministerium für Arbeit und Soziales" # D
+  correct: 1
+  jokers:
+    audience: [ 8, 71, 12, 9 ]
+    phone: "Das Innenministerium – da bin ich mir ziemlich sicher. Antwort B."
+    additional: "BMI – Bundesministerium des Innern, Antwort B."
+
+# --- Frage 3: Für 300 € ---
+- question: "In welchem Jahr wurde das THW gegründet?"
+  answers:
+  - "1945" # A
+  - "1955" # B
+  - "1960" # C
+  - "1950" # D
+  correct: 3
+  jokers:
+    audience: [ 15, 18, 12, 55 ]
+    phone: "1950, kurz nach dem Krieg – ich tippe auf D."
+    additional: "Ich tippe auf 1950, also D."
+
+# --- Frage 4: Für 500 € ---
+- question: "Wie nennt man die örtliche Grundgliederung des THW?"
+  answers:
+  - "Ortsgruppe" # A
+  - "Ortsverband" # B
+  - "Ortseinheit" # C
+  - "Ortsstützpunkt" # D
+  correct: 1
+  jokers:
+    audience: [ 11, 67, 10, 12 ]
+    phone: "Ortsverband – das ist die lokale Einheit beim THW, Antwort B."
+    additional: "Ortsverband, Antwort B."
+
+# --- Frage 5: Für 1.000 € ★ SICHERHEITSSTUFE ---
+- question: "Wie heißt die kleinste taktische Einheit beim THW?"
+  answers:
+  - "Staffel" # A
+  - "Trupp" # B
+  - "Gruppe" # C
+  - "Einheit" # D
+  correct: 1
+  jokers:
+    audience: [ 12, 53, 22, 13 ]
+    phone: "Der Trupp ist die kleinste Einheit beim THW, glaube ich – also B."
+    additional: "Trupp – das ist die grundlegende taktische Einheit, Antwort B."
+
+# --- Frage 6: Für 2.000 € ---
+- question: "Was bedeutet die Fahrzeugbezeichnung 'GKW' beim THW?"
+  answers:
+  - "Großkampfwagen" # A
+  - "Gerätekraftwagen" # B
+  - "Grundkraftwagen" # C
+  - "Geländekombifahrzeug" # D
+  correct: 1
+  jokers:
+    audience: [ 7, 74, 9, 10 ]
+    phone: "GKW ist der Gerätekraftwagen – das weiß ich sicher, Antwort B."
+    additional: "Gerätekraftwagen, das ist B."
+
+# --- Frage 7: Für 4.000 € ---
+- question: "Wie viele Ortsverbände hat das THW bundesweit ungefähr?"
+  answers:
+  - "ca. 250" # A
+  - "ca. 450" # B
+  - "ca. 668" # C
+  - "ca. 1.000" # D
+  correct: 2
+  jokers:
+    audience: [ 8, 17, 58, 17 ]
+    phone: "Ich glaube, es sind um die 668 Ortsverbände – das wäre C."
+    additional: "Irgendwas um die 668 – ich sage C."
+
+# --- Frage 8: Für 8.000 € ---
+- question: "Was ist eine 'Fachgruppe' (FGr) beim THW?"
+  answers:
+  - "Ein Ausschuss für Spezialfragen im Bundesamt" # A
+  - "Eine spezialisierte Einheit mit besonderen Fähigkeiten" # B
+  - "Eine Ausbildungsgruppe für Neuhelfer" # C
+  - "Eine überregionale Koordinierungsstelle" # D
+  correct: 1
+  jokers:
+    audience: [ 8, 69, 13, 10 ]
+    phone: "Eine Fachgruppe ist eine spezialisierte Einheit – Antwort B."
+    additional: "Spezialisten für bestimmte Aufgaben, also B."
+
+# --- Frage 9: Für 16.000 € ★ SICHERHEITSSTUFE (nur Klassisch) ---
+- question: "Was ist die Hauptaufgabe der Fachgruppe Wasserschaden/Pumpen (FGr WP)?"
+  answers:
+  - "Trinkwasserversorgung in Krisengebieten" # A
+  - "Tauchen und Unterwasserrettung" # B
+  - "Pumpen und Ableiten von Überschwemmungswasser" # C
+  - "Reinigung verunreinigter Gewässer" # D
+  correct: 2
+  jokers:
+    audience: [ 14, 9, 62, 15 ]
+    phone: "Die pumpen Wasser ab – bei Überschwemmungen. Das ist Antwort C."
+    additional: "Überschwemmungen auspumpen – das ist C."
+
+# --- Frage 10: Für 32.000 € ---
+- question: "Was ist die primäre Aufgabe der Fachgruppe Bergung (FGr B)?"
+  answers:
+  - "Beseitigung von Trümmern nach Bombenräumung" # A
+  - "Technische Rettung von Personen aus eingestürzten Gebäuden" # B
+  - "Bergwacht und alpine Rettung" # C
+  - "Befreiung von Personen aus verunfallten Fahrzeugen" # D
+  correct: 1
+  jokers:
+    audience: [ 9, 65, 14, 12 ]
+    phone: "Bergung = Rettung aus Trümmern, eingestürzte Häuser – das ist B."
+    additional: "Eingestürzte Gebäude, Trümmer – Antwort B."
+
+# --- Frage 11: Für 64.000 € ---
+- question: "Wie viele aktive Einsatzkräfte hat das THW bundesweit ungefähr?"
+  answers:
+  - "ca. 30.000" # A
+  - "ca. 80.000" # B
+  - "ca. 150.000" # C
+  - "ca. 15.000" # D
+  correct: 1
+  jokers:
+    audience: [ 12, 55, 18, 15 ]
+    phone: "Ich glaube, es sind ungefähr 80.000 aktive Helfer – das wäre B."
+    additional: "Um die 80.000 – ich würde B sagen."
+
+# --- Frage 12: Für 125.000 € ---
+- question: "Was ist 'SEEBA' beim THW?"
+  answers:
+  - "Sicherheitseinsatz-Einheit Bayern" # A
+  - "Schnelleinsatzeinheit Bergung Ausland" # B
+  - "Standard-Einsatz-Element Bevölkerungsschutz Ausland" # C
+  - "Seerettungs-Bergungsabteilung" # D
+  correct: 1
+  jokers:
+    audience: [ 13, 56, 18, 13 ]
+    phone: "SEEBA ist die Schnelleinsatzeinheit Bergung Ausland – ich bin sicher, das ist B."
+    additional: "Bergung Ausland – Auslandseinsätze, B."
+
+# --- Frage 13: Für 250.000 € ---
+- question: "Was sind Kernaufgaben der Fachgruppe Notversorgung und Notinstandsetzung (FGr N)?"
+  answers:
+  - "Medizinische Notversorgung und Erste Hilfe" # A
+  - "Notstromversorgung, Nottrinkwasser und Notinstandsetzung von Infrastruktur" # B
+  - "Reparatur und Wartung von THW-Fahrzeugen im Einsatz" # C
+  - "Koordination der Notfallkommunikation und Lageerkundung" # D
+  correct: 1
+  jokers:
+    audience: [ 9, 65, 14, 12 ]
+    phone: "FGr N macht Notstrom und Nottrinkwasser – ich meine, das ist Antwort B."
+    additional: "Notstrom, Wasserversorgung, Infrastruktur – B."
+
+# --- Frage 14: Für 500.000 € ---
+- question: "Wo befindet sich die THW-Bundesschule?"
+  answers:
+  - "Bonn" # A
+  - "Berlin" # B
+  - "Neuhausen auf den Fildern" # C
+  - "Koblenz" # D
+  correct: 2
+  jokers:
+    audience: [ 18, 22, 42, 18 ]
+    phone: "Ich habe gehört, die Bundesschule ist in Neuhausen auf den Fildern bei Stuttgart – also C."
+    additional: "Neuhausen auf den Fildern – das ist C, da bin ich mir relativ sicher."
+
+# --- Frage 15: 1.000.000 € – DIE MILLIONENFRAGE! ---
+- question: "Mit welcher INSARAG-Klassifizierung ist das THW-USAR-Team international zertifiziert?"
+  answers:
+  - "Light" # A
+  - "Medium" # B
+  - "Heavy" # C
+  - "Ultra Heavy" # D
+  correct: 2
+  jokers:
+    audience: [ 14, 22, 48, 16 ]
+    phone: "Das THW hat die höchste reguläre INSARAG-Klassifizierung – ich glaube Heavy, also C."
+    additional: "Heavy – die höchste reguläre Klasse, Antwort C."

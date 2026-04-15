@@ -1,0 +1,219 @@
+# Beispiel-Konfiguration für "Wer wird Millionär?" – THW Spiele
+# ================================================================
+# Kopiere diese Datei, passe die Fragen an und lade sie im Spiel hoch.
+#
+# PFLICHT : title + genau 15 questions
+# OPTIONAL: description, jokers pro Frage, game_state
+# ================================================================
+
+title: "Allgemeinwissen – Vorlage"
+description: "15 Beispielfragen als Vorlage – ersetze diese durch deine eigenen Fragen"
+
+questions:
+
+# --- Frage 1: Für 100 € (sehr leicht) ---
+- question: "Was ist die Hauptstadt von Deutschland?"
+  answers:
+  - "Hamburg" # A
+  - "München" # B
+  - "Berlin" # C
+  - "Frankfurt" # D
+  correct: 2 # Index der richtigen Antwort: 0=A, 1=B, 2=C, 3=D
+
+  # Joker-Daten (OPTIONAL). Ohne diese Angaben werden Zufallswerte generiert.
+  jokers:
+    audience: [ 5, 8, 82, 5 ] # Publikums-% für A, B, C, D (sollte 100 ergeben)
+    phone: "Das ist eindeutig Berlin – die Hauptstadt Deutschlands!"
+    additional: "Berlin, Antwort C – das weiß doch jeder!"
+
+# --- Frage 2: Für 200 € (sehr leicht) ---
+- question: "Wie viele Stunden hat ein Tag?"
+  answers:
+  - "12" # A
+  - "24" # B
+  - "36" # C
+  - "48" # D
+  correct: 1
+  jokers:
+    audience: [ 3, 92, 3, 2 ]
+    phone: "24 Stunden – bin ich mir absolut sicher!"
+    additional: "24, Antwort B."
+
+# --- Frage 3: Für 300 € (leicht) ---
+- question: "Auf welchem Kontinent liegt Ägypten?"
+  answers:
+  - "Asien" # A
+  - "Europa" # B
+  - "Afrika" # C
+  - "Australien" # D
+  correct: 2
+  jokers:
+    audience: [ 8, 4, 84, 4 ]
+    phone: "Ägypten liegt in Afrika – Antwort C."
+    additional: "Afrika, C."
+
+# --- Frage 4: Für 500 € (leicht) ---
+- question: "Welches Tier ist das schnellste Landtier der Welt?"
+  answers:
+  - "Löwe" # A
+  - "Gepard" # B
+  - "Antilope" # C
+  - "Pferd" # D
+  correct: 1
+  jokers:
+    audience: [ 8, 78, 9, 5 ]
+    phone: "Der Gepard – Antwort B. Bis zu 120 km/h!"
+    additional: "Gepard, B."
+
+# --- Frage 5: Für 1.000 € ★ SICHERHEITSSTUFE (leicht-mittel) ---
+- question: "Welches chemische Symbol hat Gold?"
+  answers:
+  - "Go" # A
+  - "Gd" # B
+  - "Ag" # C
+  - "Au" # D
+  correct: 3
+  jokers:
+    audience: [ 12, 8, 11, 69 ]
+    phone: "Au – vom lateinischen Aurum. Das ist D."
+    additional: "Au, Antwort D – Aurum."
+
+# --- Frage 6: Für 2.000 € (mittel) ---
+- question: "Wie viele Seiten hat ein reguläres Hexagon?"
+  answers:
+  - "5" # A
+  - "6" # B
+  - "7" # C
+  - "8" # D
+  correct: 1
+  jokers:
+    audience: [ 8, 72, 12, 8 ]
+    phone: "6 Seiten – Hexa kommt von griechisch sechs. Antwort B."
+    additional: "Hexa = sechs, also 6 Seiten, B."
+
+# --- Frage 7: Für 4.000 € (mittel) ---
+- question: "Wer schrieb den 'Faust'?"
+  answers:
+  - "Friedrich Schiller" # A
+  - "Bertolt Brecht" # B
+  - "Johann Wolfgang von Goethe" # C
+  - "Heinrich Heine" # D
+  correct: 2
+  jokers:
+    audience: [ 9, 7, 78, 6 ]
+    phone: "Goethe – Antwort C. Der Faust ist sein bekanntestes Werk."
+    additional: "Goethe, C."
+
+# --- Frage 8: Für 8.000 € (mittel) ---
+- question: "In welchem Jahr fiel die Berliner Mauer?"
+  answers:
+  - "1987" # A
+  - "1989" # B
+  - "1991" # C
+  - "1993" # D
+  correct: 1
+  jokers:
+    audience: [ 7, 81, 9, 3 ]
+    phone: "1989 – am 9. November. Antwort B."
+    additional: "9. November 1989, also B."
+
+# --- Frage 9: Für 16.000 € ★ SICHERHEITSSTUFE (nur Klassisch) ---
+- question: "Welches Element hat die Ordnungszahl 1 im Periodensystem?"
+  answers:
+  - "Helium" # A
+  - "Kohlenstoff" # B
+  - "Sauerstoff" # C
+  - "Wasserstoff" # D
+  correct: 3
+  jokers:
+    audience: [ 8, 6, 5, 81 ]
+    phone: "Wasserstoff – Ordnungszahl 1, Antwort D."
+    additional: "Wasserstoff, D."
+
+# --- Frage 10: Für 32.000 € (schwerer) ---
+- question: "Was misst ein Lichtjahr hauptsächlich?"
+  answers:
+  - "Zeit" # A
+  - "Entfernung" # B
+  - "Helligkeit" # C
+  - "Geschwindigkeit" # D
+  correct: 1
+  jokers:
+    audience: [ 14, 62, 12, 12 ]
+    phone: "Das Lichtjahr ist eine Entfernungseinheit, Antwort B."
+    additional: "Entfernung – die Strecke, die Licht in einem Jahr zurücklegt. B."
+
+# --- Frage 11: Für 64.000 € (schwerer) ---
+- question: "Wie viele Knochen hat ein erwachsener Mensch ungefähr?"
+  answers:
+  - "ca. 106" # A
+  - "ca. 206" # B
+  - "ca. 306" # C
+  - "ca. 406" # D
+  correct: 1
+  jokers:
+    audience: [ 8, 74, 13, 5 ]
+    phone: "Ungefähr 206 Knochen – Antwort B."
+    additional: "206, B."
+
+# --- Frage 12: Für 125.000 € (schwer) ---
+- question: "Was ist die Hauptstadt von Australien?"
+  answers:
+  - "Sydney" # A
+  - "Melbourne" # B
+  - "Canberra" # C
+  - "Brisbane" # D
+  correct: 2
+  jokers:
+    audience: [ 28, 18, 42, 12 ]
+    phone: "Canberra – viele denken Sydney, aber die Hauptstadt ist Canberra. Antwort C."
+    additional: "Canberra, C. Nicht Sydney!"
+
+# --- Frage 13: Für 250.000 € (sehr schwer) ---
+- question: "Welches Land hat die längste Küstenlinie der Welt?"
+  answers:
+  - "Norwegen" # A
+  - "Russland" # B
+  - "Kanada" # C
+  - "Australien" # D
+  correct: 2
+  jokers:
+    audience: [ 18, 14, 52, 16 ]
+    phone: "Kanada hat die längste Küstenlinie – Antwort C."
+    additional: "Kanada, C – durch die vielen Inseln und Fjorde enorm lang."
+
+# --- Frage 14: Für 500.000 € (sehr schwer) ---
+- question: "Wer entwickelte die allgemeine Relativitätstheorie?"
+  answers:
+  - "Isaac Newton" # A
+  - "Niels Bohr" # B
+  - "Max Planck" # C
+  - "Albert Einstein" # D
+  correct: 3
+  jokers:
+    audience: [ 4, 7, 6, 83 ]
+    phone: "Einstein – Antwort D. Die allgemeine Relativitätstheorie von 1915."
+    additional: "Einstein, D."
+
+# --- Frage 15: 1.000.000 € – DIE MILLIONENFRAGE! ---
+- question: "Welche Sprache hat weltweit die meisten Muttersprachler?"
+  answers:
+  - "Englisch" # A
+  - "Spanisch" # B
+  - "Mandarin" # C
+  - "Hindi" # D
+  correct: 2
+  jokers:
+    audience: [ 18, 15, 48, 19 ]
+    phone: "Mandarin-Chinesisch – Antwort C. Über eine Milliarde Muttersprachler."
+    additional: "Mandarin, C."
+
+# ================================================================
+# SPIELSTAND (optional – wird beim Speichern automatisch hinzugefügt)
+# Lade eine gespeicherte Datei, um ein unterbrochenes Spiel fortzusetzen.
+# ================================================================
+# game_state:
+#   current_question: 5       # Nächste zu beantwortende Frage (0-basiert)
+#   variant: "risk"           # "risk" oder "classic"
+#   jokers_used:              # Liste der bereits verbrauchten Joker
+#     - "fifty_fifty"
