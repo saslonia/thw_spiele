@@ -6,20 +6,23 @@ Sammlung von Browser-basierten Quiz- und Partyspielen für THW-Veranstaltungen. 
 ## Architektur-Prinzipien
 
 ### Single-File Spiele
+
 - Jedes Spiel ist **eine einzige `index.html`-Datei**
 - HTML, CSS, JavaScript und externe Bibliotheken sind alle inline eingebettet
 - Kein Build-System, keine Package-Manager, keine Node.js-Abhängigkeiten
 - Zielpersonen sind Nicht-Techniker: Doppelklick auf die Datei muss genügen
 
 ### YAML als Config-Format
+
 - Spielinhalte (Fragen, Texte, etc.) werden als YAML-Dateien bereitgestellt
 - Der Spieler lädt die YAML-Datei im Browser per Datei-Upload (Drag & Drop oder Klick)
 - js-yaml 4.1.0 (MIT) wird inline in die HTML-Datei eingebettet
 - Spielstand wird ebenfalls als YAML exportiert/importiert
 
 ### Spielzustand vs. Spielinhalt
+
 - **Config-Datei** enthält: Fragen, Antworten, Joker-Texte, Titel, Beschreibung
-- **Spielstand (game_state)** enthält: aktueller Fortschritt, gewählte Variante, verbrauchte Joker
+- **Spielstand (game_state)** enthält: aktueller Fortschritt, gewählte Variante, verbrauchte Joker, Durchspiel-Flag (`continued`), Spielstatus (`status`)
 - Spielstand wird in der `game_state`-Sektion der Config-YAML eingebettet und als neue Datei exportiert
 - Die **Spielvariante** wird vom Spieler beim Start selbst gewählt, nicht in der Config definiert; sie ist Teil des game_state
 
@@ -32,6 +35,8 @@ games/<spielname>/
 configs/<spielname>/
   beispiel.yaml       # Minimales Beispiel als Vorlage mit Kommentaren
   *.yaml              # Weitere fertige Konfigurationen
+tools/<spielname>/
+  index.html          # Hilfswerkzeuge (z.B. Fragen-Editor), optional
 docs/
   neues-spiel-erstellen.md  # Anleitung für neue Spiele
 ```
@@ -43,11 +48,13 @@ docs/
 - Zwei Varianten: Klassisch (3 Joker, 2 Sicherheitsstufen) oder Risiko (4 Joker, 1 Sicherheitsstufe)
 - **Variantenwahl durch den Spieler beim Spielstart** – nicht in der Config, sondern im game_state gespeichert
 - Joker: 50:50, Publikum, Telefon, Zusatzjoker (nur Risiko)
-- Publikumsjoker-Prozente kommen aus der YAML-Config (Fallback: zufällige Simulation)
+- Publikumsjoker-Prozente kommen aus der YAML-Config (Fallback: zufällige Simulation); abweichende Summen werden auf 100 normalisiert
 - Sicherheitsstufen: 1.000 € (Frage 5) immer; 16.000 € (Frage 9) nur in Classic
 - Gewinnstufen: 100, 200, 300, 500, 1.000, 2.000, 4.000, 8.000, 16.000, 32.000, 64.000, 125.000, 250.000, 500.000, 1.000.000 €
+- **Weiterspielen-Feature:** Nach falscher Antwort kann der Spieler im Durchspiel-Modus weiterspielen (kein Gewinn möglich, Endbetrag = letztes Sicherheitsniveau)
 
 ### YAML-Config-Format (Wer wird Millionär)
+
 ```yaml
 title: "Spieltitel"
 description: "Optionale Beschreibung"
@@ -65,9 +72,12 @@ game_state:                        # Optional – beim Speichern automatisch hin
   current_question: 5              # 0-basiert
   variant: "risk"                  # "risk" oder "classic"
   jokers_used: ["fifty_fifty"]
+  continued: false                 # true: Spieler spielt nach falscher Antwort ohne Gewinnmöglichkeit weiter
+  status: "playing"                # "playing", "lost", "won", "quit" oder "completed"
 ```
 
 ## Code-Konventionen
+
 - **Sprache**: Code/Variablen/Kommentare auf **Englisch**, UI-Texte auf **Deutsch**
 - Keine TypeScript, keine Frameworks (nur Vanilla JS)
 - Keine externen CDN-Calls zur Laufzeit
@@ -77,4 +87,5 @@ game_state:                        # Optional – beim Speichern automatisch hin
 - Input-Validierung bei Config-Upload (Struktur, Anzahl Fragen, Antwortindex-Range)
 
 ## Neues Spiel hinzufügen
+
 Siehe [docs/neues-spiel-erstellen.md](../docs/neues-spiel-erstellen.md)

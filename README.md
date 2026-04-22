@@ -32,6 +32,14 @@ Sammlung von Browser-Spielen für THW-Veranstaltungen. Jedes Spiel läuft vollst
 
 Alle Details zum YAML-Format: [games/wer-wird-millionaer/README.md](games/wer-wird-millionaer/README.md)
 
+> **Tipp:** Der [Fragen-Manager](tools/wer-wird-millionaer-fragen-manager/) bietet eine komfortable Web-Oberfläche zum Erstellen und Bearbeiten von Fragendateien – mit Live-Validierung und direktem YAML-Export.
+
+## Tools
+
+| Tool | Beschreibung |
+|------|--------------|
+| [Fragen-Manager (Wer wird Millionär?)](tools/wer-wird-millionaer-fragen-manager/) | Web-Interface zum Erstellen und Bearbeiten von Fragendateien |
+
 ## Für Entwickler & Contributors
 
 → [CONTRIBUTING.md](CONTRIBUTING.md)  
