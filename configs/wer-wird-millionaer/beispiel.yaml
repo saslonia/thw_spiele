@@ -4,6 +4,9 @@
 #
 # PFLICHT : title + genau 15 questions
 # OPTIONAL: description, jokers pro Frage, game_state
+#
+# Tipp: Mit dem Fragen-Manager unter tools/wer-wird-millionaer-fragen-manager/
+# lassen sich Fragendateien komfortabel über eine Web-Oberfläche erstellen.
 # ================================================================
 
 title: "Allgemeinwissen – Vorlage"
@@ -190,10 +193,7 @@ questions:
   - "Max Planck" # C
   - "Albert Einstein" # D
   correct: 3
-  jokers:
-    audience: [ 4, 7, 6, 83 ]
-    phone: "Einstein – Antwort D. Die allgemeine Relativitätstheorie von 1915."
-    additional: "Einstein, D."
+  # Joker-Daten wurden hier weggelassen – das Spiel generiert dann automatisch Zufallswerte.
 
 # --- Frage 15: 1.000.000 € – DIE MILLIONENFRAGE! ---
 - question: "Welche Sprache hat weltweit die meisten Muttersprachler?"
@@ -217,3 +217,5 @@ questions:
 #   variant: "risk"           # "risk" oder "classic"
 #   jokers_used:              # Liste der bereits verbrauchten Joker
 #     - "fifty_fifty"
+#   continued: false          # true: Spieler spielt nach falscher Antwort ohne Gewinnmöglichkeit weiter
+#   status: "playing"         # "playing", "lost", "won", "quit" oder "completed"

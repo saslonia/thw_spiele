@@ -10,6 +10,8 @@ Herzlich willkommen! Ob neue Fragen, Bugfixes oder ein komplett neues Spiel – 
 
 Format-Referenz: [games/wer-wird-millionaer/README.md](games/wer-wird-millionaer/README.md)
 
+> **Tipp:** Der [Fragen-Manager](tools/wer-wird-millionaer-fragen-manager/) ermöglicht das Erstellen von Fragendateien über eine Web-Oberfläche – kein manuelles YAML-Schreiben nötig.
+
 ## Bugfixes & Verbesserungen
 
 1. Issue erstellen oder bestehendes Issue kommentieren
@@ -36,5 +38,6 @@ Format-Referenz: [games/wer-wird-millionaer/README.md](games/wer-wird-millionaer
 games/<spielname>/index.html      # Das Spiel (alles inline)
 games/<spielname>/README.md       # Spielanleitung + Config-Format
 configs/<spielname>/<name>.yaml   # Spielkonfigurationen
+tools/<spielname>/index.html      # Hilfswerkzeuge (z.B. Fragen-Editor), optional
 docs/                             # Projektweite Anleitungen
 ```

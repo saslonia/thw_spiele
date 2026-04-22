@@ -1,6 +1,6 @@
 # Wer wird Millionär? – THW Spiele
 
-Das klassische Quizspiel für THW-Veranstaltungen. 15 Fragen, 4 Joker, eine Million Euro.
+Das klassische Quizspiel für THW-Veranstaltungen. 15 Fragen, bis zu 4 Joker, eine Million Euro.
 
 ## Schnellstart
 
@@ -11,7 +11,7 @@ Das klassische Quizspiel für THW-Veranstaltungen. 15 Fragen, 4 Joker, eine Mill
 ## Spielvarianten
 
 | Variante | Joker | Sicherheitsstufen |
-|----------|-------|-------------------|
+| -------- | ----- | ----------------- |
 | **Klassisch** | 50:50 · Publikum · Telefon | 1.000 € und 16.000 € |
 | **Risiko** | 50:50 · Publikum · Telefon · **Zusatz** | nur 1.000 € |
 
@@ -20,18 +20,18 @@ Die Variante wird **beim Spielstart gewählt**, nicht in der Config festgelegt.
 ## Joker
 
 | Joker | Beschreibung |
-|-------|-------------|
+| ----- | ----------- |
 | **50:50** | Zwei falsche Antworten werden ausgeblendet |
 | **👥 Publikum** | Balkendiagramm mit Prozentverteilung aus der Config (oder simuliert) |
 | **📞 Telefon** | Hinweistext aus der Config wird in einer Sprachblase angezeigt |
-| **🙋 Zusatz** | Zuschauermeinung aus der Config *(nur Risiko-Variante)* |
+| **🙋 Zusatz** | Zuschauer aus dem Publikum – Hinweistext aus der Config *(nur Risiko-Variante)* |
 
 Jeder Joker kann einmal pro Spiel verwendet werden. Mehrere Joker auf dieselbe Frage sind erlaubt.
 
 ## Gewinnstufen
 
 | Frage | Betrag | Sicherheitsstufe |
-|-------|--------|-----------------|
+| ----- | ------ | --------------- |
 | 1 | 100 € | |
 | 2 | 200 € | |
 | 3 | 300 € | |
@@ -51,6 +51,14 @@ Jeder Joker kann einmal pro Spiel verwendet werden. Mehrere Joker auf dieselbe F
 ## Spielstand speichern und fortsetzen
 
 Am Ende des Spiels (oder beim Aufhören) kann der Spielstand als YAML-Datei gespeichert werden. Beim nächsten Start diese Datei hochladen – das Spiel setzt an der gespeicherten Stelle fort.
+
+## Weiterspielen nach falscher Antwort
+
+Wer eine Frage falsch beantwortet, kann wahlweise aufhören oder **weiterspielen**. Im Durchspiel-Modus (*⚡ Durchspiel-Modus*) werden alle verbleibenden Fragen beantwortet, aber es wird kein weiterer Gewinn erzielt. Der Endbetrag entspricht dem zuletzt erreichten Sicherheitsniveau (oder 0 €).
+
+## Sound
+
+Das Spiel enthält Soundeffekte (Web Audio API). Der Sound-Toggle oben rechts (🔊/🔇) schaltet den Ton ein bzw. aus. Standardmäßig ist der Ton ausgeschaltet.
 
 ## YAML-Config-Format
 
@@ -79,12 +87,14 @@ game_state:                        # optional
   jokers_used:                     # Liste bereits verbrauchter Joker
     - "fifty_fifty"
     - "audience"
+  continued: false                 # true: Spieler spielt nach falscher Antwort ohne Gewinnmöglichkeit weiter
+  status: "playing"                # "playing", "lost", "won", "quit" oder "completed"
 ```
 
 ### Feldbeschreibung
 
 | Feld | Typ | Pflicht | Beschreibung |
-|------|-----|---------|-------------|
+| ---- | --- | ------- | ------------ |
 | `title` | String | ja | Spieltitel (wird auf dem Startbildschirm angezeigt) |
 | `description` | String | nein | Kurzbeschreibung |
 | `questions` | Liste | ja | Genau 15 Fragen |
@@ -97,12 +107,20 @@ game_state:                        # optional
 | `game_state.current_question` | Integer | nein | Nächste Frage (0-basiert) |
 | `game_state.variant` | String | nein | `"risk"` oder `"classic"` |
 | `game_state.jokers_used` | Liste | nein | Schlüssel verbrauchter Joker |
+| `game_state.continued` | Boolean | nein | `true` wenn nach falscher Antwort weitergespielt wird |
+| `game_state.status` | String | nein | `"playing"`, `"lost"`, `"won"`, `"quit"` oder `"completed"` |
 
 ### Joker-Schlüssel für `jokers_used`
+
 - `"fifty_fifty"` – 50:50-Joker
 - `"audience"` – Publikumsjoker
 - `"phone"` – Telefonjoker
 - `"additional"` – Zusatzjoker
+
+### Hinweise zu Joker-Daten
+
+- **Joker sind optional:** Wird für eine Frage kein `jokers`-Abschnitt angegeben, generiert das Spiel automatisch Fallback-Werte (simulierte Publikumsprozente, zufallsbasierte Telefon- und Zusatztexte).
+- **Audience-Prozente:** Die vier Werte sollten sich zu 100 addieren. Das Spiel normalisiert abweichende Werte automatisch auf 100.
 
 ## Fertige Konfigurationen
 
@@ -110,3 +128,7 @@ game_state:                        # optional
 |-------|--------|
 | [../../configs/wer-wird-millionaer/thw-grundwissen.yaml](../../configs/wer-wird-millionaer/thw-grundwissen.yaml) | 15 Fragen rund um das THW |
 | [../../configs/wer-wird-millionaer/beispiel.yaml](../../configs/wer-wird-millionaer/beispiel.yaml) | Allgemeinwissen-Vorlage |
+
+## Fragen-Manager
+
+Der [Fragen-Manager](../../tools/wer-wird-millionaer-fragen-manager/) ist ein web-basiertes Tool zum komfortablen Erstellen und Bearbeiten von Fragendateien – mit Live-Validierung, YAML-Vorschau und direktem Export. Datei `tools/wer-wird-millionaer-fragen-manager/index.html` einfach im Browser öffnen.

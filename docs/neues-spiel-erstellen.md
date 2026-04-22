@@ -10,6 +10,8 @@ games/<spielname>/
   README.md      # Spielanleitung + Config-Format-Dokumentation
 configs/<spielname>/
   beispiel.yaml  # Vorlage mit allen Feldern und Kommentaren
+tools/<spielname>/
+  index.html     # Hilfswerkzeuge (z.B. Fragen-Editor), optional
 ```
 
 Ersetze `<spielname>` durch einen kurzen, lowercase Namen mit Bindestrichen,  
@@ -18,6 +20,7 @@ z.B. `quiz-buzzers` oder `buchstaben-salat`.
 ## Anforderungen
 
 Jedes Spiel **muss**:
+
 - Eine einzige `index.html`-Datei sein (alles inline: HTML, CSS, JS, Bibliotheken)
 - Vollständig offline laufen (keine externen Requests zur Laufzeit)
 - Eine Datei-Upload-Möglichkeit für die YAML-Config bieten (Drag & Drop + Klick)
@@ -25,6 +28,7 @@ Jedes Spiel **muss**:
 - Eine deutschsprachige Benutzeroberfläche haben
 
 Jedes Spiel **sollte**:
+
 - Auf Desktop-Browsern (Chrome, Firefox, Edge) funktionieren
 - Auf Tablets nutzbar sein
 - Sound per Toggle ein-/ausschaltbar haben (Web Audio API, standardmäßig aus)
@@ -33,17 +37,21 @@ Jedes Spiel **sollte**:
 ## Schritt-für-Schritt
 
 ### 1. Ordner anlegen
+
 ```
 games/<spielname>/
 configs/<spielname>/
+tools/<spielname>/   # optional, für Hilfswerkzeuge
 ```
 
 ### 2. Beispiel-Config erstellen
+
 `configs/<spielname>/beispiel.yaml` mit allen Pflichtfeldern und erklärenden Kommentaren.
 
 ### 3. Spiel implementieren (`games/<spielname>/index.html`)
 
 Empfohlene Struktur:
+
 ```html
 <!DOCTYPE html>
 <html lang="de">
@@ -64,6 +72,7 @@ Empfohlene Struktur:
 ```
 
 Bausteine, die aus `games/wer-wird-millionaer/index.html` übernommen werden können:
+
 - js-yaml Inline-Bibliothek (MIT)
 - YAML-Upload (Drag & Drop + Click, FileReader API)
 - Spielstand-Export (Blob + URL.createObjectURL)
@@ -71,12 +80,15 @@ Bausteine, die aus `games/wer-wird-millionaer/index.html` übernommen werden kö
 - Fehlerbehandlung beim Config-Laden
 
 ### 4. README erstellen
+
 `games/<spielname>/README.md` mit:
+
 - Spielregeln
 - Config-Format (alle Felder mit Beispiel und Erklärung)
 - Spielstand-Format
 
 ### 5. Root-README aktualisieren
+
 Spiel in der Tabelle in `README.md` ergänzen.
 
 ## Config-Design-Empfehlungen
