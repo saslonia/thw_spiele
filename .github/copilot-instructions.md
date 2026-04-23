@@ -76,6 +76,40 @@ game_state:                        # Optional – beim Speichern automatisch hin
   status: "playing"                # "playing", "lost", "won", "quit" oder "completed"
 ```
 
+### Jeopardy! (`games/jeopardy/`)
+- Kategorien-Wissensquiz für 2–4 Teams, moderatorgesteuert
+- **Keine Runden, kein Final, kein Daily Double** – eine einzige Runde mit einem Board
+- 3–6 Kategorien, jeweils genau 7 Fragen, Punktwerte: 100/200/300/400/500/750/1.000
+- Zwei Spielmodi: **Quiz** (Frage anzeigen, Antwort geben) und **Jeopardy** (Antwort anzeigen, Frage formulieren)
+- **Modus wird beim Spielstart gewählt**, nicht in der Config
+- Team-Setup: 2–4 Teams mit Name + optionale Mitgliederliste
+- Aktives Team (Wähler) wechselt nach jeder richtigen Antwort zu dem Team, das korrekt antwortete
+- Score-Animationen: grüner Flash + count-up bei Gewinn, roter Shake + count-down bei Verlust; floating delta text
+- Spielstand (game_state) wird in die YAML eingebettet und kann exportiert/importiert werden
+
+### YAML-Config-Format (Jeopardy)
+
+```yaml
+title: "Spieltitel"
+description: "Optionale Beschreibung"
+
+categories:                        # 3–6 Kategorien (Pflicht)
+  - name: "Kategoriename"
+    questions:                     # Genau 7 Fragen pro Kategorie
+      - question: "Fragetext"      # Im Quiz-Modus angezeigt; im Jeopardy-Modus die Lösung
+        answer:   "Antworttext"    # Im Quiz-Modus die Lösung; im Jeopardy-Modus angezeigt
+
+game_state:                        # Optional – beim Speichern automatisch hinzugefügt
+  teams:
+    - name: "Team A"
+      members: ["Anna", "Ben"]
+      score: 500
+  mode: "quiz"                     # "quiz" oder "jeopardy"
+  active_team: 0                   # Index des wählenden Teams
+  revealed: [[0, 1], [2, 3]]       # [Kategorie-Index, Frage-Index]-Paare bereits gespielter Felder
+  status: "playing"                # "playing" oder "finished"
+```
+
 ## Code-Konventionen
 
 - **Sprache**: Code/Variablen/Kommentare auf **Englisch**, UI-Texte auf **Deutsch**

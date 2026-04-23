@@ -1,0 +1,106 @@
+# Jeopardy! – Beispiel-Konfiguration
+#
+# Pflichtfelder:
+#   title       – Spieltitel (Pflicht)
+#   description – Kurzbeschreibung (optional)
+#   categories  – Array mit 3 bis 6 Kategorien (Pflicht)
+#     name        – Kategoriename (Pflicht)
+#     questions   – Genau 7 Fragen pro Kategorie, aufsteigend nach Schwierigkeit (Pflicht)
+#       question  – Fragetext (im Quiz-Modus angezeigt; im Jeopardy-Modus die Loesung)
+#       answer    – Antworttext (im Quiz-Modus die Loesung; im Jeopardy-Modus angezeigt)
+#
+# Punktwerte: 100, 200, 300, 400, 500, 750, 1000
+# (werden automatisch vom Spiel vergeben; Reihenfolge = Schwierigkeit 1-7)
+#
+# Spielmodi:
+#   Quiz     – Frage wird angezeigt, Team gibt die Antwort
+#   Jeopardy – Antwort wird angezeigt, Team formuliert die Frage
+
+title: "Beispiel-Jeopardy"
+description: "Minimale Vorlage mit 5 Kategorien x 7 Fragen"
+
+categories:
+  - name: "Geografie"
+    questions:
+      - question: "Welche Stadt ist die Hauptstadt von Deutschland?"
+        answer: "Berlin"
+      - question: "Welcher Fluss fliesst durch Wien?"
+        answer: "Die Donau"
+      - question: "Welches ist das flaechenmaessig groesste Land der Erde?"
+        answer: "Russland"
+      - question: "Wie heisst die Hauptstadt von Australien?"
+        answer: "Canberra"
+      - question: "An welchem Meer liegt Marokko im Norden?"
+        answer: "Am Mittelmeer"
+      - question: "Wie heisst die hoechste Erhebung Afrikas?"
+        answer: "Kilimandscharo"
+      - question: "Welche Hauptstadt liegt am weitesten noerdlich: Oslo, Reykjavik oder Helsinki?"
+        answer: "Reykjavik"
+
+  - name: "Geschichte"
+    questions:
+      - question: "In welchem Jahr endete der Zweite Weltkrieg in Europa?"
+        answer: "1945"
+      - question: "Wer war der erste Kaiser des vereinten Deutschen Reiches (1871)?"
+        answer: "Wilhelm I."
+      - question: "Wie hiess das Schiff, das 1912 sank?"
+        answer: "Titanic"
+      - question: "In welchem Jahr fiel die Berliner Mauer?"
+        answer: "1989"
+      - question: "Welches Jahr gilt als Beginn des Ersten Weltkriegs?"
+        answer: "1914"
+      - question: "Wie nannte man die Epoche der Wiedergeburt von Antike und Kultur in Europa (14.-17. Jh.)?"
+        answer: "Renaissance"
+      - question: "Welcher Vertrag beendete offiziell den Dreissigjaehrigen Krieg?"
+        answer: "Der Westfaelische Friede (1648)"
+
+  - name: "Wissenschaft"
+    questions:
+      - question: "Wie lautet das chemische Symbol fuer Wasser?"
+        answer: "H2O"
+      - question: "Welches Organ pumpt das Blut durch den menschlichen Koerper?"
+        answer: "Das Herz"
+      - question: "Wie viele Planeten hat unser Sonnensystem?"
+        answer: "8"
+      - question: "Was misst ein Seismograph?"
+        answer: "Erdbeben (seismische Wellen)"
+      - question: "Wie heisst das Grundprinzip, auf dem Flugzeuge Auftrieb erzeugen?"
+        answer: "Bernoulli-Effekt / Auftrieb durch Druckunterschied"
+      - question: "Welches Element hat die Ordnungszahl 79?"
+        answer: "Gold (Au)"
+      - question: "Wie heisst die Theorie, dass die Kontinente einst einen Superkontinent bildeten?"
+        answer: "Kontinentaldrift / Plattentektonik (Pangaea)"
+
+  - name: "Sport"
+    questions:
+      - question: "Wie viele Spieler hat eine Fussballmannschaft auf dem Platz?"
+        answer: "11"
+      - question: "In welcher Stadt fanden die Olympischen Sommerspiele 2020 (2021) statt?"
+        answer: "Tokio"
+      - question: "Welche Farben hat die Flagge des IOC (Olympische Ringe)?"
+        answer: "Blau, Gelb, Schwarz, Gruen, Rot (auf weissem Grund)"
+      - question: "Wie heisst das groesste Tennisstadion in Wimbledon?"
+        answer: "Centre Court"
+      - question: "In welchem Land wurde Volleyball erfunden?"
+        answer: "USA"
+      - question: "Welcher Radfahrer gewann die Tour de France 2023?"
+        answer: "Jonas Vingegaard"
+      - question: "Wie viele Punkte gibt ein Touchdown im American Football?"
+        answer: "6 Punkte"
+
+  - name: "Unterhaltung"
+    questions:
+      - question: "Wie heisst der Zauberschueler in der Romanreihe von J.K. Rowling?"
+        answer: "Harry Potter"
+      - question: "Welches Videospiel-Franchise spielt im Koenigreich Hyrule?"
+        answer: "The Legend of Zelda"
+      - question: "In welchem Film sagt die Figur: Ich bin dein Vater?"
+        answer: "Star Wars: Das Imperium schlaegt zurueck"
+      - question: "Welche Band sang den Song Bohemian Rhapsody?"
+        answer: "Queen"
+      - question: "Wie heisst die fiktive Detektivin aus den Kriminalromanen von Agatha Christie?"
+        answer: "Miss Marple"
+      - question: "Welcher Maler schuf die Mona Lisa?"
+        answer: "Leonardo da Vinci"
+      - question: "In welcher Stadt spielt das Musical Les Miserables ueberwiegend?"
+        answer: "Paris"

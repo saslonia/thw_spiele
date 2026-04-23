@@ -10,7 +10,7 @@ Herzlich willkommen! Ob neue Fragen, Bugfixes oder ein komplett neues Spiel – 
 
 Format-Referenz: [games/wer-wird-millionaer/README.md](games/wer-wird-millionaer/README.md)
 
-> **Tipp:** Der [Fragen-Manager](tools/wer-wird-millionaer-fragen-manager/) ermöglicht das Erstellen von Fragendateien über eine Web-Oberfläche – kein manuelles YAML-Schreiben nötig.
+> **Tipp:** Für beide Spiele gibt es einen Fragen-Manager: [Wer wird Millionär?](tools/wer-wird-millionaer-fragen-manager/) und [Jeopardy!](tools/jeopardy-fragen-manager/) – Web-Oberfläche zum Erstellen von Fragendateien, kein manuelles YAML-Schreiben nötig.
 
 ## Bugfixes & Verbesserungen
 
