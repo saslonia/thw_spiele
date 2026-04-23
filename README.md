@@ -7,6 +7,7 @@ Sammlung von Browser-Spielen für THW-Veranstaltungen. Jedes Spiel läuft vollst
 | Spiel | Beschreibung |
 |-------|-------------|
 | [Wer wird Millionär?](games/wer-wird-millionaer/) | Das klassische Ratequiz mit 15 Fragen und Jokern |
+| [Jeopardy!](games/jeopardy/) | Kategorien-Wissensquiz für 2–4 Teams mit Punkteanimationen |
 
 ## Schnellstart
 
@@ -21,8 +22,10 @@ Sammlung von Browser-Spielen für THW-Veranstaltungen. Jedes Spiel läuft vollst
 
 | Datei | Inhalt |
 |-------|--------|
-| [configs/wer-wird-millionaer/thw-grundwissen.yaml](configs/wer-wird-millionaer/thw-grundwissen.yaml) | 15 Fragen rund um das THW |
-| [configs/wer-wird-millionaer/beispiel.yaml](configs/wer-wird-millionaer/beispiel.yaml) | Allgemeinwissen-Vorlage |
+| [configs/wer-wird-millionaer/thw-grundwissen.yaml](configs/wer-wird-millionaer/thw-grundwissen.yaml) | 15 Fragen rund um das THW (Wer wird Millionär?) |
+| [configs/wer-wird-millionaer/beispiel.yaml](configs/wer-wird-millionaer/beispiel.yaml) | Allgemeinwissen-Vorlage (Wer wird Millionär?) |
+| [configs/jeopardy/thw-grundwissen.yaml](configs/jeopardy/thw-grundwissen.yaml) | 5 Kategorien THW-Wissen für Jeopardy (35 Fragen) |
+| [configs/jeopardy/beispiel.yaml](configs/jeopardy/beispiel.yaml) | Allgemeinwissen-Vorlage für Jeopardy |
 
 ## Eigene Fragen erstellen
 
@@ -32,13 +35,14 @@ Sammlung von Browser-Spielen für THW-Veranstaltungen. Jedes Spiel läuft vollst
 
 Alle Details zum YAML-Format: [games/wer-wird-millionaer/README.md](games/wer-wird-millionaer/README.md)
 
-> **Tipp:** Der [Fragen-Manager](tools/wer-wird-millionaer-fragen-manager/) bietet eine komfortable Web-Oberfläche zum Erstellen und Bearbeiten von Fragendateien – mit Live-Validierung und direktem YAML-Export.
+> **Tipp:** Unter den [Tools](tools/) verbergen sich Fragen-Manager mit einer komfortablen Web-Oberfläche zum Erstellen und Bearbeiten von Fragendateien – mit Live-Validierung und direktem YAML-Export.
 
 ## Tools
 
 | Tool | Beschreibung |
 |------|--------------|
 | [Fragen-Manager (Wer wird Millionär?)](tools/wer-wird-millionaer-fragen-manager/) | Web-Interface zum Erstellen und Bearbeiten von Fragendateien |
+| [Fragen-Manager (Jeopardy!)](tools/jeopardy-fragen-manager/) | Web-Interface zum Erstellen und Bearbeiten von Jeopardy-Kategorien |
 
 ## Für Entwickler & Contributors
 
